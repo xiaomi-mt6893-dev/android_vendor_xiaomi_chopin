@@ -1,0 +1,36 @@
+{
+    "version": "1.0",
+    "product": "chopin",
+    "threshold": {
+            "lowerAdj_freeMem_threshold": 307200,
+            "update_state_delay_ms": 5000,
+            "skip_task":1      
+        },
+    "support": {
+        "mms_camcpt_enable": true,
+        "adj_swap_support": true
+        },
+    "configs_6Gmem": [
+        {
+            "name": "white_list",
+            "config": [
+                "com.android.camera",
+                "com.miui.home",
+                "com.tencent.mm",
+                "com.tencent.mm:push",
+                "com.tencent.mobileqq:MSF",
+                "com.ss.android.lark.kami:wschannel",
+                "com.xiaomi.mi_connect_service",
+                "com.phonetest.application:CameraMemoryWatcher"
+            ]
+        }
+    ],
+    "threshold_6Gmem": {
+            "lowerAdj_freeMem_threshold": 307200,
+            "cam_boost_threshold": 2621440,
+            "update_state_delay_ms": 5000,
+            "skip_task_lower":1,
+            "kill_tag": 7,
+            "lowAdj_threshold": 201
+        }
+}
