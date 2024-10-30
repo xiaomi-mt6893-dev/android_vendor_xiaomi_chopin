@@ -49,8 +49,6 @@ android_app_import {
 	soc_specific: true,
 }
 
-
-
 android_app_import {
 	name: "InProcessTetheringResOverlay",
 	owner: "xiaomi",
@@ -295,15 +293,6 @@ prebuilt_etc_xml {
 	name: "vendor.xiaomi.hardware.misys@4.0",
 	owner: "xiaomi",
 	src: "proprietary/vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@4.0.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "vendor.xiaomi.hardware.vibratorfeature.service",
-	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
