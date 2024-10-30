@@ -185,7 +185,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/bin/hw/android.hardware.ir@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.ir@1.0-service \
     vendor/xiaomi/chopin/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-service.beanpod \
     vendor/xiaomi/chopin/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service.mitee:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-service.mitee \
-    vendor/xiaomi/chopin/proprietary/vendor/bin/hw/android.hardware.lights-service.mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.lights-service.mediatek \
     vendor/xiaomi/chopin/proprietary/vendor/bin/hw/android.hardware.media.c2@1.2-mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.c2@1.2-mediatek \
     vendor/xiaomi/chopin/proprietary/vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.c2@1.2-mediatek-64b \
     vendor/xiaomi/chopin/proprietary/vendor/bin/hw/android.hardware.media.omx@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.omx@1.0-service \
@@ -599,7 +598,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/etc/init/init.wlan_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wlan_drv.rc \
     vendor/xiaomi/chopin/proprietary/vendor/etc/init/ipsec_mon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipsec_mon.rc \
     vendor/xiaomi/chopin/proprietary/vendor/etc/init/lbs_hidl_service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/lbs_hidl_service.rc \
-    vendor/xiaomi/chopin/proprietary/vendor/etc/init/lights-mtk-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/lights-mtk-default.rc \
     vendor/xiaomi/chopin/proprietary/vendor/etc/init/loghidlvendorservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/loghidlvendorservice.rc \
     vendor/xiaomi/chopin/proprietary/vendor/etc/init/md_monitor.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/md_monitor.rc \
     vendor/xiaomi/chopin/proprietary/vendor/etc/init/memtrack-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack-mediatek.rc \
@@ -3991,7 +3989,6 @@ PRODUCT_PACKAGES += \
     GFTest \
     GoogleNetworkStackResOverlay \
     GoogleTetheringResOverlay \
-    IFAAService \
     InProcessTetheringResOverlay \
     MipayService \
     NetworkStackInProcessResOverlay \
