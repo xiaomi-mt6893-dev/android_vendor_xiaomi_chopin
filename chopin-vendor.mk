@@ -3251,7 +3251,6 @@ PRODUCT_PACKAGES += \
     mediatek-telecom-common \
     mediatek-telephony-base \
     mediatek-telephony-common \
-    AHBF@2.1-service \
     android.hardware.dumpstate@1.1-service.xiaomi \
     android.hardware.neuralnetworks@1.3-service-mtk-mdla-dsp-gpu \
     fod \
