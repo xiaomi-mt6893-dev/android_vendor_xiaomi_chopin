@@ -122,6 +122,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+	name: "fod.xml",
+	owner: "xiaomi",
+	src: "proprietary/vendor/etc/vintf/manifest/fod.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
 	name: "gnss-mtk.xml",
 	owner: "xiaomi",
 	src: "proprietary/vendor/etc/vintf/manifest/gnss-mtk.xml",
