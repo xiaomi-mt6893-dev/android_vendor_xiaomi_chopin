@@ -6,7 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/chopin
 
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/chopin/proprietary/product/etc/displayconfig/display_id_0.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/display_id_0.xml \
     vendor/xiaomi/chopin/proprietary/product/etc/displayconfig/resolution_switch_process_list_backup.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/resolution_switch_process_list_backup.xml \
     vendor/xiaomi/chopin/proprietary/system/bin/vtservice:$(TARGET_COPY_OUT_SYSTEM)/bin/vtservice \
     vendor/xiaomi/chopin/proprietary/system/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.vtservice.rc \
