@@ -324,6 +324,14 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/etc/mtk_omx_core.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_omx_core.cfg \
     vendor/xiaomi/chopin/proprietary/vendor/etc/mtk_platform_codecs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_platform_codecs_config.xml \
     vendor/xiaomi/chopin/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/rsc/cn/ro.prop:$(TARGET_COPY_OUT_VENDOR)/etc/rsc/cn/ro.prop \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/rsc/cn/rw.prop:$(TARGET_COPY_OUT_VENDOR)/etc/rsc/cn/rw.prop \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/rsc/default/ro.prop:$(TARGET_COPY_OUT_VENDOR)/etc/rsc/default/ro.prop \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/rsc/default/rw.prop:$(TARGET_COPY_OUT_VENDOR)/etc/rsc/default/rw.prop \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/rsc/global/ro.prop:$(TARGET_COPY_OUT_VENDOR)/etc/rsc/global/ro.prop \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/rsc/global/rw.prop:$(TARGET_COPY_OUT_VENDOR)/etc/rsc/global/rw.prop \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/rsc/india/ro.prop:$(TARGET_COPY_OUT_VENDOR)/etc/rsc/india/ro.prop \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/rsc/india/rw.prop:$(TARGET_COPY_OUT_VENDOR)/etc/rsc/india/rw.prop \
     vendor/xiaomi/chopin/proprietary/vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy \
     vendor/xiaomi/chopin/proprietary/vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy \
     vendor/xiaomi/chopin/proprietary/vendor/etc/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
@@ -1322,7 +1330,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libCamera_ov64b40sunnymipiraw_XTS_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_ov64b40sunnymipiraw_XTS_Capture.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libCamera_ov64b40sunnymipiraw_portrait_capture_full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_ov64b40sunnymipiraw_portrait_capture_full.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libCamera_ov64b40sunnymipiraw_portrait_preview_full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_ov64b40sunnymipiraw_portrait_preview_full.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/libDR.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libDR.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libDefaultFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libDefaultFpsActor.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libFrameRecord.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libFrameRecord.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libHalSuperSensorServer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libHalSuperSensorServer.so \
@@ -1532,7 +1539,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libmipc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmipc.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libmml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmml.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libmnetlink_v104.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmnetlink_v104.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/libmnl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmnl.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmpbase.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libmsnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmsnr.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libmt_mitee.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmt_mitee.so \
