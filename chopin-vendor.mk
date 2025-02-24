@@ -391,6 +391,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/soc3_0_ram_mcu_e1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc3_0_ram_mcu_e1_hdr.bin \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/soc3_0_ram_wifi_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc3_0_ram_wifi_1a_1_hdr.bin \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/soc3_0_ram_wmmcu_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc3_0_ram_wmmcu_1a_1_hdr.bin \
+    vendor/xiaomi/chopin/proprietary/vendor/firmware/st21nfc_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/st21nfc_fw.bin \
+    vendor/xiaomi/chopin/proprietary/vendor/firmware/st21nfc_fw7.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/st21nfc_fw7.bin \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/wifi.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi.cfg \
     vendor/xiaomi/chopin/proprietary/vendor/lib/AV1SecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib/AV1SecureVdecCA.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/AVCSecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib/AVCSecureVdecCA.so \
