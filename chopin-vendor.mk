@@ -66,8 +66,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.pq@2.2-service \
     vendor/xiaomi/chopin/proprietary/vendor/bin/hw/vendor.microtrust.hardware.thh@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.microtrust.hardware.thh@2.0-service \
     vendor/xiaomi/chopin/proprietary/vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service \
-    vendor/xiaomi/chopin/proprietary/vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service \
-    vendor/xiaomi/chopin/proprietary/vendor/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service \
     vendor/xiaomi/chopin/proprietary/vendor/bin/lib3a.ccu.ddr:$(TARGET_COPY_OUT_VENDOR)/bin/lib3a.ccu.ddr \
     vendor/xiaomi/chopin/proprietary/vendor/bin/lib3a.ccu.dm:$(TARGET_COPY_OUT_VENDOR)/bin/lib3a.ccu.dm \
     vendor/xiaomi/chopin/proprietary/vendor/bin/lib3a.ccu.pm:$(TARGET_COPY_OUT_VENDOR)/bin/lib3a.ccu.pm \
@@ -82,6 +80,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/bin/thermal:$(TARGET_COPY_OUT_VENDOR)/bin/thermal \
     vendor/xiaomi/chopin/proprietary/vendor/bin/thermal_manager:$(TARGET_COPY_OUT_VENDOR)/bin/thermal_manager \
     vendor/xiaomi/chopin/proprietary/vendor/bin/thermalloadalgod:$(TARGET_COPY_OUT_VENDOR)/bin/thermalloadalgod \
+    vendor/xiaomi/chopin/proprietary/vendor/bin/vpud:$(TARGET_COPY_OUT_VENDOR)/bin/vpud \
     vendor/xiaomi/chopin/proprietary/vendor/bin/wifi_dump:$(TARGET_COPY_OUT_VENDOR)/bin/wifi_dump \
     vendor/xiaomi/chopin/proprietary/vendor/bin/wlan_assistant:$(TARGET_COPY_OUT_VENDOR)/bin/wlan_assistant \
     vendor/xiaomi/chopin/proprietary/vendor/etc/audio_param/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
@@ -317,10 +316,156 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc \
     vendor/xiaomi/chopin/proprietary/vendor/etc/init/vendor.microtrust.hardware.thh@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.microtrust.hardware.thh@2.0-service.rc \
     vendor/xiaomi/chopin/proprietary/vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc \
-    vendor/xiaomi/chopin/proprietary/vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc \
-    vendor/xiaomi/chopin/proprietary/vendor/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/init/vpud.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vpud.rc \
     vendor/xiaomi/chopin/proprietary/vendor/etc/init/wlan_assistant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wlan_assistant.rc \
-    vendor/xiaomi/chopin/proprietary/vendor/etc/mtk_omx_core.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_omx_core.cfg \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_MD_OTA_CONFIG.ini:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_MD_OTA_CONFIG.ini \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_GENERAL.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_GENERAL.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_1.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_1.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_10.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_10.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_100.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_100.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_1001.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_1001.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_1002.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_1002.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_1003.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_1003.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_1004.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_1004.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_101.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_101.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_102.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_102.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_103.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_103.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_104.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_104.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_105.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_105.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_106.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_106.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_107.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_107.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_108.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_108.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_109.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_109.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_11.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_11.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_110.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_110.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_111.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_111.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_112.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_112.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_113.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_113.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_114.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_114.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_115.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_115.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_116.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_116.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_117.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_117.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_118.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_118.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_119.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_119.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_12.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_12.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_120.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_120.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_121.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_121.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_122.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_122.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_123.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_123.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_124.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_124.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_125.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_125.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_126.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_126.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_127.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_127.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_128.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_128.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_129.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_129.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_130.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_130.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_131.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_131.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_132.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_132.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_133.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_133.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_134.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_134.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_135.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_135.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_136.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_136.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_137.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_137.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_138.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_138.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_139.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_139.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_140.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_140.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_141.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_141.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_143.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_143.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_144.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_144.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_145.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_145.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_146.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_146.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_147.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_147.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_148.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_148.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_149.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_149.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_15.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_15.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_150.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_150.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_151.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_151.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_152.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_152.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_153.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_153.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_154.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_154.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_155.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_155.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_156.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_156.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_157.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_157.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_158.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_158.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_159.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_159.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_16.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_16.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_160.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_160.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_161.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_161.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_162.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_162.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_163.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_163.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_164.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_164.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_165.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_165.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_166.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_166.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_167.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_167.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_168.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_168.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_169.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_169.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_17.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_17.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_170.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_170.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_171.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_171.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_172.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_172.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_173.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_173.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_174.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_174.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_175.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_175.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_176.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_176.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_177.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_177.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_178.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_178.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_179.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_179.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_18.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_18.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_180.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_180.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_181.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_181.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_182.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_182.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_183.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_183.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_184.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_184.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_185.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_185.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_186.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_186.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_187.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_187.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_188.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_188.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_189.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_189.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_19.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_19.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_190.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_190.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_191.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_191.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_192.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_192.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_193.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_193.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_194.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_194.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_195.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_195.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_196.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_196.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_197.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_197.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_198.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_198.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_199.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_199.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_2.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_2.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_20.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_20.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_200.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_200.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_201.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_201.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_202.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_202.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_203.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_203.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_204.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_204.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_205.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_205.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_206.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_206.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_207.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_207.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_208.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_208.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_209.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_209.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_210.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_210.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_211.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_211.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_212.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_212.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_213.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_213.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_222.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_222.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_223.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_223.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_224.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_224.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_225.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_225.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_3.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_3.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_5.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_5.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_50.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_50.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_6.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_6.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_7.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_7.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_8.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_8.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OPOTA_SBPID_9.mcfopota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OPOTA_SBPID_9.mcfopota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OTA.mcfota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OTA.mcfota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OTA_CERT_COMMON.mcfota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OTA_CERT_COMMON.mcfota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OTA_CMCC.mcfota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OTA_CMCC.mcfota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OTA_CT.mcfota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OTA_CT.mcfota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OTA_CU.mcfota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OTA_CU.mcfota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OTA_REL10.mcfota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OTA_REL10.mcfota \
+    vendor/xiaomi/chopin/proprietary/vendor/etc/mdota/MTK_OTA_REL11.mcfota:$(TARGET_COPY_OUT_VENDOR)/etc/mdota/MTK_OTA_REL11.mcfota \
     vendor/xiaomi/chopin/proprietary/vendor/etc/mtk_platform_codecs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_platform_codecs_config.xml \
     vendor/xiaomi/chopin/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     vendor/xiaomi/chopin/proprietary/vendor/etc/rsc/cn/ro.prop:$(TARGET_COPY_OUT_VENDOR)/etc/rsc/cn/ro.prop \
@@ -372,6 +517,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/RCV-cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/RCV-cs35l41-dsp1-spk-prot.bin \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/WIFI_RAM_CODE_soc3_0_1a_1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/WIFI_RAM_CODE_soc3_0_1a_1.bin \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/aw8697_haptic.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw8697_haptic.bin \
+    vendor/xiaomi/chopin/proprietary/vendor/firmware/aw8697_rtp_1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw8697_rtp_1.bin \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/conninfra.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/conninfra.cfg \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/cs35l41-delta-rcv-handset.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-delta-rcv-handset.txt \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/cs35l41-delta-rcv-handsfree.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-delta-rcv-handsfree.txt \
@@ -382,7 +528,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/cs35l41-dsp1-spk-cali.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.wmfw \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-prot.bin \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-prot.wmfw \
+    vendor/xiaomi/chopin/proprietary/vendor/firmware/fm_cust.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/fm_cust.cfg \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/lib3a.ccu:$(TARGET_COPY_OUT_VENDOR)/firmware/lib3a.ccu \
+    vendor/xiaomi/chopin/proprietary/vendor/firmware/mt6635_fm_v1_coeff.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mt6635_fm_v1_coeff.bin \
+    vendor/xiaomi/chopin/proprietary/vendor/firmware/mt6635_fm_v1_patch.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mt6635_fm_v1_patch.bin \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/soc3_0_patch_wmmcu_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc3_0_patch_wmmcu_1a_1_hdr.bin \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/soc3_0_ram_bt_1_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc3_0_ram_bt_1_1_hdr.bin \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/soc3_0_ram_bt_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc3_0_ram_bt_1a_1_hdr.bin \
@@ -419,7 +568,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libAVCSecureVencCA.so:$(TARGET_COPY_OUT_VENDOR)/lib/libAVCSecureVencCA.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libCamera_gc02m1sunnymipiraw_E2EHDR_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_gc02m1sunnymipiraw_E2EHDR_Preview.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libCamera_gc02m1sunnymipiraw_E2EHDR_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_gc02m1sunnymipiraw_E2EHDR_Video.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libCamera_gc02m1sunnymipiraw_Face_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_gc02m1sunnymipiraw_Face_Capture.so \
@@ -752,13 +900,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libCamera_ov64b40sunnymipiraw_portrait_preview_full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_ov64b40sunnymipiraw_portrait_preview_full.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libDefaultFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libDefaultFpsActor.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libFrameRecord.so:$(TARGET_COPY_OUT_VENDOR)/lib/libFrameRecord.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libHEVCdec_sa.ca7.android.so:$(TARGET_COPY_OUT_VENDOR)/lib/libHEVCdec_sa.ca7.android.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libMtkOmxAdpcmDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libMtkOmxAdpcmDec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libMtkOmxAlacDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libMtkOmxAlacDec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libMtkOmxApeDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libMtkOmxApeDec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libMtkOmxCore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libMtkOmxCore.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libMtkOmxGsmDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libMtkOmxGsmDec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libMtkOmxMp3Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libMtkOmxMp3Dec.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libMtkSpeechEnh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libMtkSpeechEnh.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libNoFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libNoFpsActor.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOpenCL.so \
@@ -769,10 +910,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libaal_key.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaal_key.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libaal_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaal_mtk.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libaalservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaalservice.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libadpcmdec_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadpcmdec_mtk.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libaedv.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaedv.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libaiselector_cust.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaiselector_cust.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libaispq.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaispq.so \
+    vendor/xiaomi/chopin/proprietary/vendor/lib/libalsautils-v31.so:$(TARGET_COPY_OUT_VENDOR)/lib/libalsautils-v31.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libappgamepq.so:$(TARGET_COPY_OUT_VENDOR)/lib/libappgamepq.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libapu_mdw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libapu_mdw.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libapu_mdw_batch.so:$(TARGET_COPY_OUT_VENDOR)/lib/libapu_mdw_batch.so \
@@ -800,16 +941,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libbluetooth_mtk_pure.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_mtk_pure.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-vendor.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libbwc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbwc.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libcodec2_mtk_c2store.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_mtk_c2store.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libcodec2_mtk_vdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_mtk_vdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libcodec2_mtk_venc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_mtk_venc.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libcodec2_soft_mtk_alacdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_soft_mtk_alacdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libcodec2_soft_mtk_apedec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_soft_mtk_apedec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libcodec2_soft_mtk_imaadpcmdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_soft_mtk_imaadpcmdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libcodec2_soft_mtk_mp3dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_soft_mtk_mp3dec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libcodec2_soft_mtk_msadpcmdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_soft_mtk_msadpcmdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libcodec2_vpp_qt_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_vpp_qt_plugin.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libcodec2_vpp_rs_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_vpp_rs_plugin.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libcustom_nvram.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcustom_nvram.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libcvsd_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcvsd_mtk.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libdapparamstorage.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdapparamstorage.so \
@@ -817,7 +948,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libdre.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdre.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libfgauge_gm30.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfgauge_gm30.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libfile_op.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfile_op.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libformatter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libformatter.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libfvaudio.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfvaudio.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libgamehdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgamehdr.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libged.so:$(TARGET_COPY_OUT_VENDOR)/lib/libged.so \
@@ -828,21 +958,12 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libgralloctypes_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgralloctypes_mtk.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libgz_gp_client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgz_gp_client.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libgz_uree.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgz_uree.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libh264dec_customize.so:$(TARGET_COPY_OUT_VENDOR)/lib/libh264dec_customize.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libh264dec_sa.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libh264dec_sa.ca7.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libh264dec_sd.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libh264dec_sd.ca7.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libh264dec_se.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libh264dec_se.ca7.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libh264enc_sa.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libh264enc_sa.ca7.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libhdrvideo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdrvideo.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libhevce_sb.ca7.android.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhevce_sb.ca7.android.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libimsg_log.so:$(TARGET_COPY_OUT_VENDOR)/lib/libimsg_log.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libion_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libion_mtk.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libion_ulit.so:$(TARGET_COPY_OUT_VENDOR)/lib/libion_ulit.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libladder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libladder.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libmml.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmml.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libmp3dec_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmp3dec_mtk.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libmp4enc_sa.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmp4enc_sa.ca7.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libmp4enc_xa.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmp4enc_xa.ca7.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libmsbc_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmsbc_mtk.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libmtcloader.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtcloader.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libmtkcutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtkcutils.so \
@@ -855,7 +976,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libnvram.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvram.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libnvram_sec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvram_sec.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libnxp_extamp_intf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnxp_extamp_intf.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libopus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libopus.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libpq_cust_base.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpq_cust_base.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libpqframework.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpqframework.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/librpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/librpc.so \
@@ -863,54 +983,25 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libscltm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscltm.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libspeech_enh_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspeech_enh_lib.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libspeechparser_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspeechparser_vendor.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_amrnb_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_amrnb_common.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_enc_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_enc_common.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_flacdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_flacdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_aacdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_aacdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_aacenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_aacenc.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_ac4dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_ac4dec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_amrdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_amrdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_amrnbenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_amrnbenc.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_amrwbenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_amrwbenc.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_avcdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_avcdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_avcenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_avcenc.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_ddpdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_ddpdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_flacdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_flacdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_flacenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_flacenc.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_g711dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_g711dec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_gsmdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_gsmdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_hevcdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_hevcdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_mp3dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_mp3dec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_mpeg2dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_mpeg2dec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_mpeg4dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_mpeg4dec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_mpeg4enc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_mpeg4enc.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_opusdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_opusdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_rawdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_rawdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_vorbisdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_vorbisdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_vpxdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_vpxdec.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefright_soft_vpxenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_vpxenc.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefrightdolby.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefrightdolby.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefrighthw.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libteeclientjni_isee.so:$(TARGET_COPY_OUT_VENDOR)/lib/libteeclientjni_isee.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libteeclientjni_isee@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libteeclientjni_isee@1.1.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libteei_daemon_vfs.so:$(TARGET_COPY_OUT_VENDOR)/lib/libteei_daemon_vfs.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libthermalalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthermalalgo.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libudf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libudf.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libvcodec_oal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvcodec_oal.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libvcodec_utility_v3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvcodec_utility_v3a.so \
+    vendor/xiaomi/chopin/proprietary/vendor/lib/libvcodec_utility.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvcodec_utility.so \
+    vendor/xiaomi/chopin/proprietary/vendor/lib/libvcodecdrv.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvcodecdrv.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libvcodecdrv_header_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvcodecdrv_header_stub.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libvcodecdrv_v3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvcodecdrv_v3a.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libvorbisidec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvorbisidec.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libvow_ap_test_aa.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvow_ap_test_aa.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libvow_ap_test_ha.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvow_ap_test_ha.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libvow_ap_test_hh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvow_ap_test_hh.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libvow_ap_test_nn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvow_ap_test_nn.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libvp8dec_sa.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvp8dec_sa.ca7.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libvp8enc_sa.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvp8enc_sa.ca7.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libvp9dec_sa.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvp9dec_sa.ca7.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libvpu.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpu.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libvpu5.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpu5.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/libvpudv3a_vcodec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpudv3a_vcodec.so \
+    vendor/xiaomi/chopin/proprietary/vendor/lib/libvpud_vcodec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpud_vcodec.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/mt6893/arm.graphics-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/mt6893/arm.graphics-V1-ndk_platform.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/mt6893/arm.graphics-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/mt6893/arm.graphics-ndk_platform.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/mt6893/libaiselector.so:$(TARGET_COPY_OUT_VENDOR)/lib/mt6893/libaiselector.so \
@@ -962,10 +1053,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/APUWareHmpServer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/APUWareHmpServer.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/APUWareUtilsServer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/APUWareUtilsServer.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/APUWareXrpServer_v2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/APUWareXrpServer_v2.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/AV1SecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib64/AV1SecureVdecCA.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/AVCSecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib64/AVCSecureVdecCA.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/HEVCSecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib64/HEVCSecureVdecCA.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/VP9SecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib64/VP9SecureVdecCA.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/com.fingerprints.extension@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.fingerprints.extension@3.0.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/com.xiaomi.plugin.capbokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.xiaomi.plugin.capbokeh.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/com.xiaomi.plugin.dc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.xiaomi.plugin.dc.so \
@@ -1054,7 +1141,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/lib3a.n3d3a.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.n3d3a.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/lib3a.sensors.color.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.sensors.color.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/lib3a.sensors.flicker.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.sensors.flicker.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/libAVCSecureVencCA.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libAVCSecureVencCA.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libCamera_gc02m1sunnymipiraw_E2EHDR_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_gc02m1sunnymipiraw_E2EHDR_Preview.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libCamera_gc02m1sunnymipiraw_E2EHDR_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_gc02m1sunnymipiraw_E2EHDR_Video.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libCamera_gc02m1sunnymipiraw_Face_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCamera_gc02m1sunnymipiraw_Face_Capture.so \
@@ -1390,7 +1476,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libHalSuperSensorServer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libHalSuperSensorServer.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libHalSuperSensorServerCWrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libHalSuperSensorServerCWrapper.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libJpgEncPipe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libJpgEncPipe.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/libMtkOmxCore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMtkOmxCore.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libNoFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libNoFpsActor.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOpenCL.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libSQLiteModule_VER_ALL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSQLiteModule_VER_ALL.so \
@@ -1428,6 +1513,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libalCFR.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalCFR.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libalLDC.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalLDC.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libalhLDC.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalhLDC.so \
+    vendor/xiaomi/chopin/proprietary/vendor/lib64/libalsautils-v31.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalsautils-v31.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libanc_calibration_parser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libanc_calibration_parser.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libanc_dc_base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libanc_dc_base.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libappgamepq.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libappgamepq.so \
@@ -1571,7 +1657,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libgz_uree.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgz_uree.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libhdrvideo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdrvideo.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libheichal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libheichal.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/libhevce_sb.ca7.android.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhevce_sb.ca7.android.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libhfmanager.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhfmanager.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libhfmanagerwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhfmanagerwrapper.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libhwm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwm.so \
@@ -1677,7 +1762,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libmtkcam_sysutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_sysutils.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libmtkcam_tuning_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_tuning_utils.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libmtkcam_ulog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_ulog.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/libmtkcam_ulog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_ulog.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libmtkcam_vsync_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_vsync_util.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libmtkconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkconfig.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libmtkconfigutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkconfigutils.so \
@@ -1722,7 +1806,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libstagefright_soft_ac4dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_soft_ac4dec.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libstagefright_soft_ddpdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_soft_ddpdec.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libstagefrightdolby.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefrightdolby.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefrighthw.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libstereoinfoaccessor_vsdof.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstereoinfoaccessor_vsdof.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libstorage_otp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstorage_otp.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libsysenv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsysenv.so \
@@ -1736,8 +1819,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libtrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtrm.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libudf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libudf.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/liburee_meta_drmkeyinstall.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liburee_meta_drmkeyinstall.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/libvcodec_oal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvcodec_oal.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/libvcodecdrv_header_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvcodecdrv_header_stub.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libvia-ril.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvia-ril.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libviagpsrpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libviagpsrpc.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libviamipc-ril.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libviamipc-ril.so \
@@ -1752,7 +1833,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libvidhance_stabilizer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvidhance_stabilizer.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libvidhance_super_stabilization.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvidhance_super_stabilization.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libvpu.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpu.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/libvpu5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpu5.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libwa_opticalzoom_fusion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwa_opticalzoom_fusion.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libwifi-hal-mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal-mtk.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/libwpfa.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwpfa.so \
@@ -1801,7 +1881,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.device@3.7.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.device@3.7.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.security@1.0.so \
