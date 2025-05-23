@@ -349,59 +349,6 @@
       sha_version="1"
   />
 
-  <!-- Claro Columbia -->
-  <supl_profile
-      name="Claro_CO"
-      addr=""
-      port="7275"
-      tls="true"
-      mcc_mnc="732101"
-      supl_version="2"
-      tls_version="1"
-      sha_version="0"
-      esupl_apn_mode="3"
-  />
-
-  <!-- Claro Peru -->
-  <supl_profile
-      name="Claro_PE"
-      addr=""
-      port="7275"
-      tls="true"
-      mcc_mnc="71610"
-      supl_version="2"
-      tls_version="1"
-      sha_version="0"
-      esupl_apn_mode="3"
-  />
-
-  <!-- Entel Peru -->
-  <supl_profile
-      name="Entel_PE"
-      addr=""
-      port="7275"
-      tls="true"
-      mcc_mnc="71617"
-      supl_version="2"
-      tls_version="1"
-      sha_version="0"
-      esupl_apn_mode="3"
-  />
-
-  <!-- Movistar Peru -->
-  <supl_profile
-      name="Movistar_PE"
-      addr=""
-      port="7275"
-      tls="true"
-      mcc_mnc="71606"
-      supl_version="2"
-      tls_version="1"
-      sha_version="0"
-      esupl_apn_mode="3"
-  />
-
-
   <!-- nlp_profile
 
     name:
@@ -990,7 +937,7 @@
 
   -->
   <up_setting
-    ca_enable="true"
+    ca_enable="false"
     ni_request="true"
     roaming="true"
     cdma_preferred="0"

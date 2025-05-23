@@ -37,4 +37,3 @@ libmialgo_ie_capture.so 64
 librelight_only.so 64
 libsdk_sr.so 64
 lib_sr_models.so 64
-libneuron_adapter.so 64

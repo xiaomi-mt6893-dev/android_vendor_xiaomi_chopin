@@ -8,5 +8,3 @@ service camerahalserver /vendor/bin/hw/camerahalserver
 
 on boot
     chmod 0666 /sys/kernel/fpsgo/common/force_onoff
-    # init the  cpuset value for the camera background
-    write /dev/cpuset/camera-background/cpus 0-3

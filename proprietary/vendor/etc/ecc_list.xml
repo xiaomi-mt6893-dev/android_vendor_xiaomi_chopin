@@ -26,34 +26,30 @@
                 Ex: 460 FFF means all operators in China
     -->
 
+
     <!-- Add for Belarus operators -->
     <!-- K19A code for HQ-157176 by yefeng at 20211008 start -->
-    <EccEntry Ecc="101" Category="0" Condition="3" Plmn="257 01"/>
-    <EccEntry Ecc="102" Category="0" Condition="3" Plmn="257 01"/>
-    <EccEntry Ecc="103" Category="0" Condition="3" Plmn="257 01"/>
-    <EccEntry Ecc="104" Category="0" Condition="3" Plmn="257 01"/>
+    <EccEntry Ecc="101" Category="0" Condition="2" Plmn="257 FFF"/>
+    <EccEntry Ecc="102" Category="0" Condition="2" Plmn="257 FFF"/>
+    <EccEntry Ecc="103" Category="0" Condition="2" Plmn="257 FFF"/>
+    <EccEntry Ecc="104" Category="0" Condition="2" Plmn="257 FFF"/>
     <!-- K19A code for HQ-157176 by yefeng at 20211008 end -->
-    
+
     <!-- Add for Vodafone/Ireland operators -->
     <EccEntry Ecc="999" Category="0" Condition="1" Plmn="272 01"/>
 
-    <!-- Add for Turkey operators -->
-    <EccEntry Ecc="112" Category="0" Condition="0" Plmn="286 FFF"/>
-    <EccEntry Ecc="110" Category="0" Condition="2" Plmn="286 FFF"/>
-    <EccEntry Ecc="155" Category="0" Condition="2" Plmn="286 FFF"/>
-
     <!--add UAE xiaomi -->
-    <EccEntry Ecc="999" Category="0" Condition="1" Plmn = "424 FFF" />  
-    <EccEntry Ecc="998" Category="0" Condition="2" Plmn = "424 FFF" />  
-    <EccEntry Ecc="997" Category="0" Condition="2" Plmn = "424 FFF" />  
-    <EccEntry Ecc="996" Category="0" Condition="2" Plmn = "424 FFF" />  
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn = "424 FFF" />
+    <EccEntry Ecc="998" Category="0" Condition="2" Plmn = "424 FFF" />
+    <EccEntry Ecc="997" Category="0" Condition="2" Plmn = "424 FFF" />
+    <EccEntry Ecc="996" Category="0" Condition="2" Plmn = "424 FFF" />
     <EccEntry Ecc="991" Category="0" Condition="2" Plmn = "424 FFF" />
-    <EccEntry Ecc="992" Category="0" Condition="2" Plmn = "424 FFF" />  
-    <EccEntry Ecc="993" Category="0" Condition="2" Plmn = "424 FFF" />  
-    <EccEntry Ecc="995" Category="0" Condition="2" Plmn = "424 FFF" />  
+    <EccEntry Ecc="992" Category="0" Condition="2" Plmn = "424 FFF" />
+    <EccEntry Ecc="993" Category="0" Condition="2" Plmn = "424 FFF" />
+    <EccEntry Ecc="995" Category="0" Condition="2" Plmn = "424 FFF" />
     <EccEntry Ecc="901" Category="0" Condition="2" Plmn = "424 FFF" />
-    <EccEntry Ecc="909" Category="0" Condition="2" Plmn = "424 FFF" />  
-    <EccEntry Ecc="116111" Category="0" Condition="2" Plmn = "424 FFF" />   
+    <EccEntry Ecc="909" Category="0" Condition="2" Plmn = "424 FFF" />
+    <EccEntry Ecc="116111" Category="0" Condition="2" Plmn = "424 FFF" />
     <!--add UAE xiaomi -->
 
     <!-- Add for Japan KDDI operator -->
@@ -279,9 +275,8 @@
     <EccEntry Ecc="114" Category="0" Condition="2" Plmn="452 FFF"/>
     <EccEntry Ecc="115" Category="0" Condition="2" Plmn="452 FFF"/>
 
-    <!-- Add  for HongKong -->
+    <!-- Add 999 for HongKong -->
     <EccEntry Ecc="999" Category="0" Condition="1" Plmn="454 FFF"/>
-    <EccEntry Ecc="110" Category="0" Condition="1" Plmn="454 FFF"/>
 
     <!-- Add for Laos operator -->
     <EccEntry Ecc="1191" Category="0" Condition="2" Plmn = "457 FFF" />
@@ -372,15 +367,11 @@
     <EccEntry Ecc="15" Category="0" Condition="2" Plmn="604 FFF"/>
     <EccEntry Ecc="19" Category="0" Condition="2" Plmn="604 FFF"/>
     <EccEntry Ecc="177" Category="0" Condition="2" Plmn="604 FFF"/>
-    <EccEntry Ecc="150" Category="0" Condition="2" Plmn="604 FFF"/>
-    <EccEntry Ecc="190" Category="0" Condition="2" Plmn="604 FFF"/>
 
     <!-- Add for Avantel/Colombia operator -->
-    <EccEntry Ecc="123" Category="0" Condition="1" Plmn = "732 130"/>
-    <EccEntry Ecc="123" Category="0" Condition="1" Plmn = "732 360"/>
-    <EccEntry Ecc="123" Category="0" Condition="1" Plmn = "732 103"/>
-    <EccEntry Ecc="123" Category="0" Condition="1" Plmn = "732 123"/>
-    <EccEntry Ecc="123" Category="0" Condition="1" Plmn = "732 101"/>
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn="732 130"/>
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn="732 360"/>
+
     <!-- xiaomi add being -->
     <!-- Add for Greece operator -->
     <EccEntry Ecc="100" Category="1" Condition="2" Plmn = "202 FFF" />
@@ -473,44 +464,10 @@
     <EccEntry Ecc="999" Category="0" Condition="1" Plmn = "502 FFF" />
 
     <!-- Add for Indonesia operator -->
-    <EccEntry Ecc="118" Category="0" Condition="1" Plmn="510 FFF"/>
-    <EccEntry Ecc="113" Category="0" Condition="1" Plmn="510 FFF"/>
-    <EccEntry Ecc="112" Category="0" Condition="1" Plmn="510 10"/>
-    <EccEntry Ecc="113" Category="4" Condition="1" Plmn="510 10"/>
-    <EccEntry Ecc="118" Category="0" Condition="1" Plmn="510 10"/>
-    <EccEntry Ecc="110" Category="0" Condition="2" Plmn="510 10"/>
-    <EccEntry Ecc="115" Category="0" Condition="2" Plmn="510 10"/>
-    <EccEntry Ecc="129" Category="0" Condition="2" Plmn="510 10"/>
-    <EccEntry Ecc="119" Category="0" Condition="2" Plmn="510 10"/>
-    <EccEntry Ecc="110" Category="1" Condition="1" Plmn="510 09"/>
-    <EccEntry Ecc="112" Category="2" Condition="1" Plmn="510 09"/>
-    <EccEntry Ecc="113" Category="4" Condition="1" Plmn="510 09"/>
-    <EccEntry Ecc="115" Category="8" Condition="1" Plmn="510 09"/>
-    <EccEntry Ecc="118" Category="2" Condition="1" Plmn="510 09"/>
-    <EccEntry Ecc="129" Category="0" Condition="2" Plmn="510 09"/>
-    <EccEntry Ecc="119" Category="0" Condition="2" Plmn="510 09"/>
-    <EccEntry Ecc="110" Category="1" Condition="1" Plmn="510 28"/>
-    <EccEntry Ecc="112" Category="2" Condition="1" Plmn="510 28"/>
-    <EccEntry Ecc="113" Category="4" Condition="1" Plmn="510 28"/>
-    <EccEntry Ecc="115" Category="8" Condition="1" Plmn="510 28"/>
-    <EccEntry Ecc="118" Category="2" Condition="1" Plmn="510 28"/>
-    <EccEntry Ecc="129" Category="0" Condition="2" Plmn="510 28"/>
-    <EccEntry Ecc="119" Category="0" Condition="2" Plmn="510 28"/>
-    <EccEntry Ecc="110" Category="1" Condition="1" Plmn="510 01"/>
-    <EccEntry Ecc="112" Category="2" Condition="1" Plmn="510 01"/>
-    <EccEntry Ecc="113" Category="0" Condition="1" Plmn="510 01"/>
-    <EccEntry Ecc="118" Category="0" Condition="1" Plmn="510 01"/>
-    <EccEntry Ecc="115" Category="0" Condition="2" Plmn="510 01"/>
-    <EccEntry Ecc="123" Category="0" Condition="2" Plmn="510 01"/>
-    <EccEntry Ecc="119" Category="0" Condition="2" Plmn="510 01"/>
-    <EccEntry Ecc="110" Category="0" Condition="1" Plmn="510 11"/>
-    <EccEntry Ecc="112" Category="0" Condition="1" Plmn="510 11"/>
-    <EccEntry Ecc="113" Category="0" Condition="1" Plmn="510 11"/>
-    <EccEntry Ecc="115" Category="0" Condition="1" Plmn="510 11"/>
-    <EccEntry Ecc="118" Category="0" Condition="1" Plmn="510 11"/>
-    <EccEntry Ecc="117" Category="0" Condition="2" Plmn="510 11"/>
-    <EccEntry Ecc="129" Category="0" Condition="2" Plmn="510 11"/>
-    <EccEntry Ecc="119" Category="0" Condition="2" Plmn="510 11"/>
+    <EccEntry Ecc="110" Category="0" Condition="1" Plmn = "510 FFF" />
+    <EccEntry Ecc="118" Category="0" Condition="1" Plmn = "510 FFF" />
+    <EccEntry Ecc="199" Category="0" Condition="1" Plmn = "510 FFF" />
+    <EccEntry Ecc="113" Category="0" Condition="1" Plmn = "510 FFF" />
 
     <!-- Add for Philippines operator -->
     <EccEntry Ecc="117" Category="0" Condition="0" Plmn = "515 FFF" />
@@ -527,10 +484,8 @@
     <EccEntry Ecc="999" Category="0" Condition="1" Plmn = "852 FFF" />
 
     <!-- Peru operator-->
-    <EccEntry Ecc="112" Category="0" Condition="1" Plmn = "716 FFF"/>
-    <EccEntry Ecc="911" Category="0" Condition="1" Plmn = "716 FFF"/>
-    <EccEntry Ecc="105" Category="0" Condition="1" Plmn = "716 06" />
-    <EccEntry Ecc="105" Category="0" Condition="1" Plmn = "716 10" />
+    <EccEntry Ecc="105" Category="0" Condition="1" Plmn = "716 FF" />
+
 
     <!-- Add for Egypt operator -->
     <EccEntry Ecc="123" Category="0" Condition="2" Plmn = "602 FFF" />
@@ -551,14 +506,6 @@
     <!-- Add for Oman operator -->
     <EccEntry Ecc="999" Category="0" Condition="1" Plmn = "422 FFF" />
     <EccEntry Ecc="9999" Category="0" Condition="2" Plmn = "422 FFF" />
-
-     <!-- Add for Macao operator -->
-    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="455 FFF"/>
-    <EccEntry Ecc="993" Category="0" Condition="1" Plmn="455 FFF"/>
-    <EccEntry Ecc="110" Category="0" Condition="1" Plmn="455 FFF"/>
-    <EccEntry Ecc="120" Category="0" Condition="1" Plmn="455 FFF"/>
-    <EccEntry Ecc="119" Category="0" Condition="1" Plmn="455 FFF"/>
-
     <!-- Add for Cambodia operator -->
     <EccEntry Ecc="117" Category="0" Condition="2" Plmn = "456 FFF" />
     <EccEntry Ecc="119" Category="0" Condition="2" Plmn = "456 FFF" />
@@ -577,8 +524,4 @@
     <EccEntry Ecc="114" Category="0" Condition="2" Plmn = "410 FFF" />
     <EccEntry Ecc="130" Category="0" Condition="2" Plmn = "410 FFF" />
     <EccEntry Ecc="1122" Category="0" Condition="2" Plmn = "410 FFF" />
-
-    <!-- TS-81183 K19 Add for all Nigeria operator-->
-    <EccEntry Ecc="767" Category="0" Condition="2" Plmn="621 FFF"/>
-
 </EccTable>

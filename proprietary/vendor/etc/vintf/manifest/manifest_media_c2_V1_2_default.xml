@@ -1,10 +1,10 @@
 <manifest version="1.0" type="device">
-    <hal format="hidl">
-        <name>vendor.xiaomi.hw.touchfeature</name>
+    <hal>
+        <name>android.hardware.media.c2</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.2</version>
         <interface>
-            <name>ITouchFeature</name>
+            <name>IComponentStore</name>
             <instance>default</instance>
         </interface>
     </hal>

@@ -6,10 +6,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/chopin
 
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/chopin/proprietary/product/etc/displayconfig/resolution_switch_process_list_backup.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/resolution_switch_process_list_backup.xml \
     vendor/xiaomi/chopin/proprietary/system/lib64/libmtkperf_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtkperf_client.so \
-    vendor/xiaomi/chopin/proprietary/system/system/lib/vendor.xiaomi.hardware.displayfeature@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/system/lib/vendor.xiaomi.hardware.displayfeature@1.0.so \
-    vendor/xiaomi/chopin/proprietary/system/system/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/system/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so \
     vendor/xiaomi/chopin/proprietary/system_ext/bin/vtservice:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/vtservice \
     vendor/xiaomi/chopin/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc \
     vendor/xiaomi/chopin/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
@@ -271,7 +268,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM1.xml \
     vendor/xiaomi/chopin/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml \
     vendor/xiaomi/chopin/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml \
-    vendor/xiaomi/chopin/proprietary/vendor/etc/init.panel_info.sh:$(TARGET_COPY_OUT_VENDOR)/etc/init.panel_info.sh \
     vendor/xiaomi/chopin/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc \
     vendor/xiaomi/chopin/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
     vendor/xiaomi/chopin/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc \
@@ -557,7 +553,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/hw/audio.primary.mt6893.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.mt6893.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/hw/audio.r_submix.mt6893.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.r_submix.mt6893.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/hw/displayfeature.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/displayfeature.default.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/hw/mt6893/android.hardware.graphics.allocator@4.0-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/mt6893/android.hardware.graphics.allocator@4.0-impl-mediatek.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/hw/mt6893/android.hardware.graphics.mapper@4.0-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/mt6893/android.hardware.graphics.mapper@4.0-impl-mediatek.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/hw/mt6893/vulkan.mali.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/mt6893/vulkan.mali.so \
@@ -566,8 +561,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/hw/vendor.mediatek.hardware.pq@2.13-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.pq@2.13-impl.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libCamera_gc02m1sunnymipiraw_E2EHDR_Preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_gc02m1sunnymipiraw_E2EHDR_Preview.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libCamera_gc02m1sunnymipiraw_E2EHDR_Video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_gc02m1sunnymipiraw_E2EHDR_Video.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib/libCamera_gc02m1sunnymipiraw_Face_Capture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCamera_gc02m1sunnymipiraw_Face_Capture.so \
@@ -1088,7 +1081,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/hw/android.hardware.thermal@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.thermal@2.0-impl.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/hw/consumerir.common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/consumerir.common.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/hw/displayfeature.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/displayfeature.default.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/hw/fingerprint.fpc.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.fpc.default.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/hw/fingerprint.goodix.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.goodix.default.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/hw/gatekeeper.beanpod.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gatekeeper.beanpod.so \
@@ -1114,8 +1106,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/imx355sunny_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/imx355sunny_mipi_raw_IdxMgr.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/imx355sunny_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/imx355sunny_mipi_raw_tuning.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/lib3a.ae.core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.ae.core.so \
@@ -1918,10 +1908,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.microtrust.hardware.thh@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.microtrust.hardware.thh@2.0.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so \
-    vendor/xiaomi/chopin/proprietary/vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hw.touchfeature@1.0.so \
     vendor/xiaomi/chopin/proprietary/vendor/lib64/wechat.beanpod.so:$(TARGET_COPY_OUT_VENDOR)/lib64/wechat.beanpod.so \
     vendor/xiaomi/chopin/proprietary/vendor/mitee/ta/14b0aad8-c011-4a3f-b66aca8d0e66f273.ta:$(TARGET_COPY_OUT_VENDOR)/mitee/ta/14b0aad8-c011-4a3f-b66aca8d0e66f273.ta \
     vendor/xiaomi/chopin/proprietary/vendor/mitee/ta/377ee4e8-af0e-474f-a9d636a9268fe85c.ta:$(TARGET_COPY_OUT_VENDOR)/mitee/ta/377ee4e8-af0e-474f-a9d636a9268fe85c.ta \
@@ -1948,7 +1936,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/thh/ta/7778c03fc30c4dd0a319ea29643d4d4b.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/7778c03fc30c4dd0a319ea29643d4d4b.ta \
     vendor/xiaomi/chopin/proprietary/vendor/thh/ta/86f623f6a2994dfdb560ffd3e5a62c29.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/86f623f6a2994dfdb560ffd3e5a62c29.ta \
     vendor/xiaomi/chopin/proprietary/vendor/thh/ta/8888c03fc30c4dd0a319ea29643d4d4b.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/8888c03fc30c4dd0a319ea29643d4d4b.ta \
-    vendor/xiaomi/chopin/proprietary/vendor/thh/ta/8aaaf201246000007143fe4f7c823c80.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/8aaaf201246000007143fe4f7c823c80.ta \
     vendor/xiaomi/chopin/proprietary/vendor/thh/ta/9073f03a9618383bb1856eb3f990babd.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/9073f03a9618383bb1856eb3f990babd.ta \
     vendor/xiaomi/chopin/proprietary/vendor/thh/ta/93feffccd8ca11e796c7c7a21acb4932.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/93feffccd8ca11e796c7c7a21acb4932.ta \
     vendor/xiaomi/chopin/proprietary/vendor/thh/ta/a985d3eb3b524d44be6c628a813561e8.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/a985d3eb3b524d44be6c628a813561e8.ta \
@@ -1980,6 +1967,5 @@ PRODUCT_PACKAGES += \
     gnss-mtk.xml \
     gnss@2.1-service.xml \
     manifest_android.hardware.drm@1.4-service.widevine.xml \
-    manifest_media_c2_V1_1_default.xml \
-    manifest_vendor.dolby.hardware.dms.xml \
-    vendor.xiaomi.hw.touchfeature@1.0-service.xml
+    manifest_media_c2_V1_2_default.xml \
+    manifest_vendor.dolby.hardware.dms.xml
